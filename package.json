@@ -4,11 +4,21 @@
   "description": "demo MERN stack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "backend": "nodemon backend/server.js",
+    "frontend": "npm start --prefix frontend",
+    "both": "concurrently \"npm start\" \"npm run frontend\" "
   },
   "author": "Diaz",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.22"
   }
 }
